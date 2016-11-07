@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProyectoWebModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Puesto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Compañia" Type="nvarchar" MaxLength="50" />
+    <Property Name="posicion" Type="nvarchar" MaxLength="50" />
+    <Property Name="ubicacion" Type="nvarchar" MaxLength="50" />
+    <Property Name="descripcion" Type="nvarchar" MaxLength="1000" />
+    <Property Name="aplicar" Type="nvarchar" MaxLength="50" />
+    <Property Name="publico" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Categoria" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tipo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User" Type="nvarchar" MaxLength="50" />
+    <Property Name="Contraseña" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="ProyectoWebModelStoreContainer">
+    <EntitySet Name="Puesto" EntityType="Self.Puesto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

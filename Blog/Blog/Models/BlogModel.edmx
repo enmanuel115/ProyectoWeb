@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ProyectoWebModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Puesto">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Compañia" Type="nvarchar" MaxLength="50" />
+          <Property Name="posicion" Type="nvarchar" MaxLength="50" />
+          <Property Name="ubicacion" Type="nvarchar" MaxLength="50" />
+          <Property Name="descripcion" Type="nvarchar" MaxLength="1000" />
+          <Property Name="aplicar" Type="nvarchar" MaxLength="50" />
+          <Property Name="publico" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Categoria" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tipo" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="User" Type="nvarchar" MaxLength="50" />
+          <Property Name="Contraseña" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="ProyectoWebModelStoreContainer">
+          <EntitySet Name="Puesto" EntityType="Self.Puesto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ProyectoWebModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Puesto">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Compañia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="posicion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ubicacion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="descripcion" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="aplicar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="publico" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Categoria" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="User" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Contraseña" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="ProyectoWebEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Puesto" EntityType="Self.Puesto" />
+          <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ProyectoWebModelStoreContainer" CdmEntityContainer="ProyectoWebEntities">
+          <EntitySetMapping Name="Puesto">
+            <EntityTypeMapping TypeName="ProyectoWebModel.Puesto">
+              <MappingFragment StoreEntitySet="Puesto">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Compañia" ColumnName="Compañia" />
+                <ScalarProperty Name="posicion" ColumnName="posicion" />
+                <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="aplicar" ColumnName="aplicar" />
+                <ScalarProperty Name="publico" ColumnName="publico" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuario">
+            <EntityTypeMapping TypeName="ProyectoWebModel.Usuario">
+              <MappingFragment StoreEntitySet="Usuario">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="User" ColumnName="User" />
+                <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

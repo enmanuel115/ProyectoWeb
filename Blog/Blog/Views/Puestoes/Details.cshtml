@@ -1,0 +1,89 @@
+﻿@model Blog.Models.Puesto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Puesto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dd>
+            @Html.DisplayFor(model => model.Categoria)
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Compañia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Compañia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.posicion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.posicion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ubicacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ubicacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.aplicar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.aplicar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.publico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.publico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Categoria)
+        </dt>
+
+
+
+
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

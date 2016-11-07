@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProyectoWebModelStoreContainer" CdmEntityContainer="ProyectoWebEntities">
+    <EntitySetMapping Name="Puesto">
+      <EntityTypeMapping TypeName="ProyectoWebModel.Puesto">
+        <MappingFragment StoreEntitySet="Puesto">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Compañia" ColumnName="Compañia" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="aplicar" ColumnName="aplicar" />
+          <ScalarProperty Name="publico" ColumnName="publico" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="ProyectoWebModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
